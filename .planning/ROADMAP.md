@@ -72,6 +72,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Elevation | 2/2 | Complete | 2026-02-16 |
-| 2. Hydrology | 1/2 | In progress | - |
+| 2. Hydrology | 2/2 | Complete | 2026-02-16 |
 | 3. Climate & Biomes | 0/TBD | Not started | - |
 | 4. History & CLI | 0/TBD | Not started | - |
