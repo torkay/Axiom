@@ -24,7 +24,12 @@ executable Axiom
                       Axiom.Climate.Temperature,
                       Axiom.Climate.Precipitation,
                       Axiom.Climate.Climate,
-                      Axiom.Bio.Whittaker
+                      Axiom.Bio.Whittaker,
+                      Axiom.DSL.AST,
+                      Axiom.DSL.Lexer,
+                      Axiom.DSL.Parser,
+                      Axiom.Simulation.State,
+                      Axiom.Simulation.History
     build-depends:    base >=4.18,
                       massiv >= 1.0.5.0,
                       pure-noise,
@@ -32,6 +37,13 @@ executable Axiom
                       deepseq,
                       fgl >= 5.8.3.0,
                       PSQueue >= 1.2.1,
-                      containers
+                      containers,
+                      bytestring,
+                      text,
+                      megaparsec >= 9.7.0,
+                      parser-combinators,
+                      mtl >= 2.3,
+                      aeson >= 2.2,
+                      optparse-applicative
     hs-source-dirs:   src
     default-language: GHC2021
