@@ -19,9 +19,11 @@ executable Axiom
                       Axiom.Geo.Flow,
                       Axiom.Geo.Drainage,
                       Axiom.Types.Hydrology,
+                      Axiom.Types.Biome,
                       Axiom.Geo.Hydrology,
                       Axiom.Climate.Temperature,
-                      Axiom.Climate.Precipitation
+                      Axiom.Climate.Precipitation,
+                      Axiom.Bio.Whittaker
     build-depends:    base >=4.18,
                       massiv >= 1.0.5.0,
                       pure-noise,
