@@ -19,6 +19,9 @@ Thumbs.db
 # Claude / tooling
 .claude/
 
+# Planning docs (local only)
+.planning/
+
 # Cabal
 cabal.project.local
 cabal.project.local~

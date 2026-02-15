@@ -101,8 +101,6 @@ All four phases are complete:
 3. **Climate & Biomes** -- Temperature/precipitation models, Whittaker biome classification
 4. **History & CLI** -- State Monad simulation, Megaparsec DSL parser, CLI with ASCII/JSON export
 
-See [.planning/ROADMAP.md](.planning/ROADMAP.md) for detailed phase documentation.
-
 ## License
 
 MIT -- see [LICENSE](LICENSE).
