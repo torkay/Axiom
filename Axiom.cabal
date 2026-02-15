@@ -29,7 +29,11 @@ executable Axiom
                       Axiom.DSL.Lexer,
                       Axiom.DSL.Parser,
                       Axiom.Simulation.State,
-                      Axiom.Simulation.History
+                      Axiom.Simulation.History,
+                      Axiom.CLI.Options,
+                      Axiom.CLI.Commands,
+                      Axiom.Export.JSON,
+                      Axiom.Export.ASCII
     build-depends:    base >=4.18,
                       massiv >= 1.0.5.0,
                       pure-noise,
@@ -45,5 +49,5 @@ executable Axiom
                       mtl >= 2.3,
                       aeson >= 2.2,
                       optparse-applicative
-    hs-source-dirs:   src
+    hs-source-dirs:   src, app
     default-language: GHC2021
