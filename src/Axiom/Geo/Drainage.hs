@@ -64,7 +64,7 @@ extractRivers accumGrid graph threshold =
         where Sz2 rows cols = sz
 
       -- Find high-accumulation cells (river cells)
-      riverCells = filter (\cell -> accumGrid ! cell > threshold) allCells
+      riverCells = filter (\cell -> (accumGrid ! cell) > threshold) allCells
 
       -- Trace each river from high-accumulation cell to outlet
       rivers = concatMap (traceRiver sz graph accumGrid) riverCells
@@ -86,7 +86,7 @@ traceRiver sz graph accumGrid startCell =
        -- For each upstream path, create a river from source to outlet
        [ River
            { path = upPath ++ [startCell] ++ downstreamPath
-           , Axiom.Types.Hydrology.length = length upPath + 1 + length downstreamPath
+           , Axiom.Types.Hydrology.length = Prelude.length upPath + 1 + Prelude.length downstreamPath
            , sourcePos = if null upPath then startCell else head upPath
            , mouthPos = if null downstreamPath then startCell else last downstreamPath
            }

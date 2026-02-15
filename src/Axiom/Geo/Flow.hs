@@ -75,10 +75,13 @@ flowAccumulation flowGrid =
 
       -- Build adjacency map (cell -> downstream neighbor)
       flowMap = Map.fromList
-        [ (cell, downstream cell)
+        [ (cell, downstreamCell)
         | cell <- allCells
         , let dir = flowGrid ! cell
         , dir /= NoFlow
+        , let (dr, dc) = directionToOffset dir
+        , let (r :. c) = cell
+        , let downstreamCell = (r + dr) :. (c + dc)
         ]
 
       -- Topological sort (Kahn's algorithm)
