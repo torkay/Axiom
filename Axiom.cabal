@@ -16,8 +16,11 @@ executable Axiom
     other-modules:    Axiom.World,
                       Axiom.Geo.Elevation,
                       Axiom.Geo.Noise,
+                      Axiom.Geo.Flow,
+                      Axiom.Geo.Drainage,
                       Axiom.Types.Hydrology,
-                      Axiom.Geo.Hydrology
+                      Axiom.Geo.Hydrology,
+                      Axiom.Climate.Temperature
     build-depends:    base >=4.18,
                       massiv >= 1.0.5.0,
                       pure-noise,
