@@ -177,4 +177,4 @@ All four phases are complete:
 
 ## Licence
 
-MIT -- see [LICENSE](LICENSE).
+MIT -- see [LICENSE](LICENSE)
