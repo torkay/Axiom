@@ -10,6 +10,11 @@ import qualified Data.Massiv.Array as M
 import Data.Massiv.Array (Array, U, Ix2(..), Sz(Sz2), (!))
 import Data.List (group, sort)
 import Axiom.DSL.Parser (parseLaws)
+import Axiom.Simulation.State (initialWorldState, WorldState(..), Civilization(..))
+import Axiom.Simulation.History (runSimulation)
+import qualified Data.Map.Strict as Map
+import Data.Aeson (encode)
+import qualified Data.ByteString.Lazy.Char8 as BL
 
 main :: IO ()
 main = do
@@ -69,6 +74,29 @@ main = do
   case parseLaws invalidLaw of
     Left err -> putStrLn $ "✓ Error message:\n" ++ err
     Right _ -> putStrLn "ERROR: Should have failed to parse"
+
+  -- Test temporal simulation
+  putStrLn "\n=== Temporal Simulation Test ==="
+  let initial = initialWorldState
+  putStrLn $ "Initial state: Year " ++ show (currentYear initial)
+  putStrLn $ "  Civilizations: " ++ show (Map.size (civilizations initial))
+  let firstCiv = head $ Map.elems (civilizations initial)
+  putStrLn $ "  Starting population: " ++ show (civPopulation firstCiv)
+  putStrLn $ "  Starting technology: " ++ show (civTechnology firstCiv)
+
+  putStrLn "\nRunning 100-year simulation..."
+  let final = runSimulation 100 initial
+  putStrLn $ "Final state: Year " ++ show (currentYear final)
+  let finalCiv = head $ Map.elems (civilizations final)
+  putStrLn $ "  Final population: " ++ show (civPopulation finalCiv)
+  putStrLn $ "  Final technology: " ++ show (civTechnology finalCiv)
+  putStrLn $ "  Events recorded: " ++ show (length (events final))
+
+  -- Test JSON serialization
+  putStrLn "\n=== JSON Serialization Test ==="
+  let jsonOutput = encode final
+  putStrLn $ "✓ JSON size: " ++ show (BL.length jsonOutput) ++ " bytes"
+  putStrLn "✓ World state is JSON-serializable"
 
 -- Helper: Print a climate cell showing the causal chain
 printCell :: ClimateCell -> IO ()
