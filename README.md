@@ -1,10 +1,10 @@
 # Axiom
 
-A deterministic procedural world-generation engine in Haskell. Axiom enforces logical consistency through a causal functional pipeline where every layer builds on the previous with physics-based rules -- rivers never flow uphill, biomes follow from climate, and civilizations emerge from geography.
+A deterministic procedural world-generation engine in Haskell. Axiom enforces logical consistency through a causal functional pipeline where every layer builds on the previous with physics-based rules -- rivers never flow uphill, biomes follow from climate, and civilisations emerge from geography.
 
 ## Architecture
 
-The world is modeled as a pure function:
+The world is modelled as a pure function:
 
 ```
 W(v,t) = L_history(L_bio(L_geo(N(v))))
@@ -56,9 +56,9 @@ src/Axiom/
 - **GADTs** for type-level enforcement of world state progression (impossible states are unrepresentable)
 - **State Monad** for temporal simulation without side effects
 - **Lazy evaluation** for on-demand chunk computation
-- **Megaparsec** DSL for defining Universal Laws that govern world behavior
+- **Megaparsec** DSL for defining Universal Laws that govern world behaviour
 - **massiv** arrays for high-performance elevation/climate grids
-- **fgl** graphs for drainage network modeling
+- **fgl** graphs for drainage network modelling
 
 ## Building
 
@@ -141,7 +141,7 @@ Loading world from world.json
 Exported JSON to data.json
 ```
 
-World state is serialized as JSON with civilizations, events, and temporal data:
+World state is serialised as JSON with civilisations, events, and temporal data:
 
 ```json
 {
@@ -159,7 +159,7 @@ World state is serialized as JSON with civilizations, events, and temporal data:
 
 ### ASCII Map Rendering
 
-The engine includes a biome-to-character ASCII renderer for terminal visualization:
+The engine includes a biome-to-character ASCII renderer for terminal visualisation:
 
 ```
 Legend: T=Tropical Rainforest  S=Savanna  ~=Desert  R=Temperate Rainforest
@@ -175,6 +175,6 @@ All four phases are complete:
 3. **Climate & Biomes** -- Temperature/precipitation models, Whittaker biome classification
 4. **History & CLI** -- State Monad simulation, Megaparsec DSL parser, CLI with ASCII/JSON export
 
-## License
+## Licence
 
 MIT -- see [LICENSE](LICENSE).
