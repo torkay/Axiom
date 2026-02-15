@@ -4,7 +4,7 @@ A deterministic procedural world-generation engine in Haskell. Axiom enforces lo
 
 ## Architecture
 
-![Axiom Architecture](docs/architecture.png)
+![Axiom Architecture](docs/architecture-v2.png)
 
 ### Module Structure
 
