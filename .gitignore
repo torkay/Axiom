@@ -2,3 +2,25 @@ dist-newstyle/
 *.hi
 *.o
 .ghc.environment.*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.direnv/
+.envrc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude / tooling
+.claude/
+
+# Cabal
+cabal.project.local
+cabal.project.local~
+.cabal-sandbox/
+cabal.sandbox.config
