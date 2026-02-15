@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 ## Current Position
 
 Phase: 2 of 4 (Hydrology & Water Systems)
-Plan: 1 of 2 in current phase
+Plan: 2 of 2 in current phase - PHASE COMPLETE
 Status: Complete
-Last activity: 2026-02-16 — Completed 02-01-PLAN.md (Hydrology foundation established)
+Last activity: 2026-02-16 — Completed 02-02-PLAN.md (Flow direction, accumulation, drainage networks)
 
-Progress: ███░░░░░░░ 37%
+Progress: ████░░░░░░ 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
+- Total plans completed: 4
 - Average duration: 23 min
-- Total execution time: 1.15 hours
+- Total execution time: 1.5 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 2 | 46 min | 23 min |
-| 2 | 1 | 23 min | 23 min |
+| 2 | 2 | 46 min | 23 min |
 
 **Recent Trend:**
-- Last 5 plans: 18m, 28m, 23m
+- Last 5 plans: 18m, 28m, 23m, 23m
 - Trend: Steady (23 min avg)
 
 ## Accumulated Context
@@ -54,6 +54,9 @@ Recent decisions affecting current work:
 | 2 | Use fgl's PatriciaTree.Gr | Gr type exported from PatriciaTree not Graph module |
 | 2 | Qualified massiv imports | Avoids namespace conflicts, clearer code |
 | 2 | Priority-Flood algorithm | O(m log² m) proven depression-filling (Barnes 2014) |
+| 2 | Topological sort for flow accumulation | Avoids recursion/stack overflow on long river paths |
+| 2 | Epsilon tolerance 0.01 for elevation | Based on typical DEM vertical accuracy |
+| 2 | River threshold 100 cells | Balances meaningful rivers vs noise in extraction |
 
 ### Deferred Issues
 
@@ -65,6 +68,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-16T18:00:00Z
-Stopped at: Completed 02-01-PLAN.md (Hydrology foundation established - ready for 02-02 flow computation)
+Last session: 2026-02-16T19:30:00Z
+Stopped at: Completed 02-02-PLAN.md (Phase 2 complete - ready for Phase 3: Climate & Biomes)
 Resume file: None
