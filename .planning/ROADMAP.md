@@ -19,7 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation & Elevation** - Project structure, types, noise generation, elevation mapping
 - [x] **Phase 2: Hydrology** - Rivers, lakes, basins (proof of causal correctness)
 - [x] **Phase 3: Climate & Biomes** - Temperature, precipitation, biome assignment from geo data
-- [ ] **Phase 4: History & CLI** - State Monad simulation, DSL parser, CLI interface
+- [x] **Phase 4: History & CLI** - State Monad simulation, DSL parser, CLI interface
 
 ## Phase Details
 
@@ -61,11 +61,11 @@ Plans:
 **Depends on**: Phase 3 (requires complete world state for historical simulation)
 **Research**: Completed (2026-02-16)
 **Research topics**: Megaparsec parser combinators and DSL design patterns, State Monad for managing temporal evolution, Aeson JSON encoding for world export, CLI argument parsing libraries
-**Plans**: 2 (1 complete)
+**Plans**: 2 (both complete)
 
 Plans:
 - [x] 04-01: DSL Parser & State Monad (Megaparsec parser, temporal simulation engine)
-- [ ] 04-02: CLI Interface (optparse-applicative, ASCII/JSON export)
+- [x] 04-02: CLI Interface (optparse-applicative, ASCII/JSON export)
 
 ## Progress
 
@@ -77,4 +77,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation & Elevation | 2/2 | Complete | 2026-02-16 |
 | 2. Hydrology | 2/2 | Complete | 2026-02-16 |
 | 3. Climate & Biomes | 2/2 | Complete | 2026-02-15 |
-| 4. History & CLI | 1/2 | In progress | - |
+| 4. History & CLI | 2/2 | Complete | 2026-02-15 |
