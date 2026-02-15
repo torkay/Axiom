@@ -1,0 +1,22 @@
+cabal-version:   3.16
+name:            Axiom
+version:         0.1.0.0
+license:         NONE
+author:          torkay
+maintainer:      amatorri847@gmail.com
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall -O2
+
+executable Axiom
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base >=4.18,
+                      massiv,
+                      pure-noise,
+                      vector,
+                      deepseq
+    hs-source-dirs:   src
+    default-language: GHC2021
