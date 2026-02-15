@@ -15,11 +15,16 @@ executable Axiom
     main-is:          Main.hs
     other-modules:    Axiom.World,
                       Axiom.Geo.Elevation,
-                      Axiom.Geo.Noise
+                      Axiom.Geo.Noise,
+                      Axiom.Types.Hydrology,
+                      Axiom.Geo.Hydrology
     build-depends:    base >=4.18,
-                      massiv,
+                      massiv >= 1.0.5.0,
                       pure-noise,
                       vector,
-                      deepseq
+                      deepseq,
+                      fgl >= 5.8.3.0,
+                      PSQueue >= 1.2.1,
+                      containers
     hs-source-dirs:   src
     default-language: GHC2021
