@@ -5,32 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-16)
 
 **Core value:** The causal correctness of the functional pipeline—each layer (Geo → Bio → History) follows from the previous with physics-based logic, proven most viscerally through hydrology where rivers never flow uphill and lakes form only at logical basins.
-**Current focus:** Phase 1 — Foundation & Elevation
+**Current focus:** Phase 2 — Hydrology & Water Systems
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation & Elevation)
-Plan: 2 of 2 in current phase
+Phase: 2 of 4 (Hydrology & Water Systems)
+Plan: 1 of 2 in current phase
 Status: Complete
-Last activity: 2026-02-16 — Completed 01-02-PLAN.md (Phase 1 complete)
+Last activity: 2026-02-16 — Completed 02-01-PLAN.md (Hydrology foundation established)
 
-Progress: ██░░░░░░░░ 25%
+Progress: ███░░░░░░░ 37%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
+- Total plans completed: 3
 - Average duration: 23 min
-- Total execution time: 0.77 hours
+- Total execution time: 1.15 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 2 | 46 min | 23 min |
+| 2 | 1 | 23 min | 23 min |
 
 **Recent Trend:**
-- Last 5 plans: 18m, 28m
+- Last 5 plans: 18m, 28m, 23m
 - Trend: Steady (23 min avg)
 
 ## Accumulated Context
@@ -50,6 +51,9 @@ Recent decisions affecting current work:
 | 1 | makeArrayR vs computeAs for massiv | Direct representation specification avoids type ambiguity |
 | 1 | weightedStrength 0.0 for fractal noise | Independent octave amplitudes create cleaner terrain |
 | 1 | 512x512 grid size for elevation | Balances detail and performance for testing |
+| 2 | Use fgl's PatriciaTree.Gr | Gr type exported from PatriciaTree not Graph module |
+| 2 | Qualified massiv imports | Avoids namespace conflicts, clearer code |
+| 2 | Priority-Flood algorithm | O(m log² m) proven depression-filling (Barnes 2014) |
 
 ### Deferred Issues
 
@@ -61,6 +65,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-16T16:50:00Z
-Stopped at: Completed 01-02-PLAN.md (Phase 1 complete - ready for Phase 2 Hydrology)
+Last session: 2026-02-16T18:00:00Z
+Stopped at: Completed 02-01-PLAN.md (Hydrology foundation established - ready for 02-02 flow computation)
 Resume file: None
