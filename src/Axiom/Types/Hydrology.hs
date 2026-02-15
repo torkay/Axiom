@@ -8,7 +8,7 @@ module Axiom.Types.Hydrology
   ) where
 
 import Data.Massiv.Array (Ix2)
-import Data.Graph.Inductive.Graph (Gr)
+import Data.Graph.Inductive.PatriciaTree (Gr)
 
 -- | Flow direction to one of 8 neighbors
 data FlowDirection = N | NE | E | SE | S | SW | W | NW | NoFlow

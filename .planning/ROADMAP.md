@@ -37,12 +37,13 @@ Plans:
 ### Phase 2: Hydrology
 **Goal**: Implement physics-based water flow where rivers never flow uphill, lakes form at basin minimums, and drainage networks follow elevation gradients—the visceral proof of causal correctness.
 **Depends on**: Phase 1 (requires elevation data)
-**Research**: Likely (algorithmic complexity and physics simulation)
+**Research**: Completed (2026-02-16)
 **Research topics**: Water flow simulation algorithms, graph traversal for river networks, basin detection methods, performance optimization for large grids
-**Plans**: TBD
+**Plans**: 2 (1 complete)
 
 Plans:
-- (To be created during phase planning)
+- [x] 02-01: Hydrology Foundation (Core types, Priority-Flood depression filling)
+- [ ] 02-02: Flow & Drainage (Flow direction, accumulation, drainage networks)
 
 ### Phase 3: Climate & Biomes
 **Goal**: Derive climate zones (temperature, precipitation) from elevation and latitude, then assign biomes logically based on climate conditions.
@@ -71,6 +72,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Elevation | 2/2 | Complete | 2026-02-16 |
-| 2. Hydrology | 0/TBD | Not started | - |
+| 2. Hydrology | 1/2 | In progress | - |
 | 3. Climate & Biomes | 0/TBD | Not started | - |
 | 4. History & CLI | 0/TBD | Not started | - |
