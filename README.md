@@ -4,17 +4,7 @@ A deterministic procedural world-generation engine in Haskell. Axiom enforces lo
 
 ## Architecture
 
-The world is modelled as a pure function:
-
-```
-W(v,t) = L_history(L_bio(L_geo(N(v))))
-```
-
-Each transformation layer builds causally on the previous:
-
-```
-Tectonics → Hydrology → Climate → Biomes → History
-```
+![Axiom Architecture](docs/architecture.png)
 
 ### Module Structure
 
@@ -90,80 +80,6 @@ Define custom rules that govern world generation:
 
 ```bash
 axiom generate --seed 42 --laws rules.axiom -o world.json
-```
-
-## Example Output
-
-### CLI Interface
-
-```
-$ axiom --help
-axiom - causal world-gen with DSL and simulation
-
-Usage: Axiom COMMAND
-
-  Axiom: Deterministic world generation engine
-
-Available options:
-  -h,--help                Show this help text
-
-Available commands:
-  generate                 Generate a new world
-  simulate                 Run historical simulation
-  export                   Export world in different formats
-```
-
-### World Generation
-
-```
-$ axiom generate --seed 42 --size "(64,64)" -o world.json
-Generating world with seed 42
-Size: (64,64)
-No Laws file provided, using default simulation
-World saved to world.json
-```
-
-### Historical Simulation
-
-```
-$ axiom simulate --years 50 -w world.json -o world-sim.json
-Loading world from world.json
-Running simulation for 50 years
-Simulation complete. Final year: 50
-Result saved to world-sim.json
-```
-
-### JSON Export
-
-```
-$ axiom export -f JSON -o data.json world.json
-Loading world from world.json
-Exported JSON to data.json
-```
-
-World state is serialised as JSON with civilisations, events, and temporal data:
-
-```json
-{
-  "civilizations": {
-    "1": {
-      "civPopulation": 1613,
-      "civTechnology": 1,
-      "civLocation": [128, 128]
-    }
-  },
-  "currentYear": 50,
-  "events": []
-}
-```
-
-### ASCII Map Rendering
-
-The engine includes a biome-to-character ASCII renderer for terminal visualisation:
-
-```
-Legend: T=Tropical Rainforest  S=Savanna  ~=Desert  R=Temperate Rainforest
-        t=Temperate Forest     .=Grassland  ^=Taiga  *=Tundra
 ```
 
 ## Development Phases
