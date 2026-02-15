@@ -18,4 +18,4 @@ data BiomeType
   | Grassland           -- Cool and moderate precip (0-10°C, < 100 cm/year)
   | Taiga               -- Cold and wet (< 0°C, > 50 cm/year)
   | Tundra              -- Cold and dry (< 0°C, < 50 cm/year)
-  deriving (Show, Eq)
+  deriving (Show, Eq, Ord)
