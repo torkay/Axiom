@@ -1,4 +1,5 @@
 {-# LANGUAGE DataKinds #-}
+{-# LANGUAGE OverloadedStrings #-}
 
 module Main (main) where
 
@@ -8,6 +9,7 @@ import Axiom.Climate.Climate (generateClimate, ClimateCell(..))
 import qualified Data.Massiv.Array as M
 import Data.Massiv.Array (Array, U, Ix2(..), Sz(Sz2), (!))
 import Data.List (group, sort)
+import Axiom.DSL.Parser (parseLaws)
 
 main :: IO ()
 main = do
@@ -51,6 +53,22 @@ main = do
   mapM_ (\(b, count) -> putStrLn $ "  " ++ show b ++ ": " ++ show count ++ " cells") biomeCounts
 
   putStrLn "\n✓ Climate layer complete - biomes derive causally from geography"
+
+  -- Test DSL parser
+  putStrLn "\n=== DSL Parser Test ==="
+  let testLaw = "law population_growth: population + 10\nlaw tech_advance: if population > 100 then technology + 1 else technology"
+  case parseLaws testLaw of
+    Left err -> putStrLn $ "Parse error: " ++ err
+    Right laws -> do
+      putStrLn $ "✓ Parsed " ++ show (length laws) ++ " laws successfully"
+      mapM_ (putStrLn . ("  " ++) . show) laws
+
+  -- Test error handling
+  putStrLn "\n=== DSL Error Handling Test ==="
+  let invalidLaw = "law invalid syntax here"
+  case parseLaws invalidLaw of
+    Left err -> putStrLn $ "✓ Error message:\n" ++ err
+    Right _ -> putStrLn "ERROR: Should have failed to parse"
 
 -- Helper: Print a climate cell showing the causal chain
 printCell :: ClimateCell -> IO ()
