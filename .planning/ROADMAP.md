@@ -16,7 +16,7 @@ None
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation & Elevation** - Project structure, types, noise generation, elevation mapping
+- [x] **Phase 1: Foundation & Elevation** - Project structure, types, noise generation, elevation mapping
 - [ ] **Phase 2: Hydrology** - Rivers, lakes, basins (proof of causal correctness)
 - [ ] **Phase 3: Climate & Biomes** - Temperature, precipitation, biome assignment from geo data
 - [ ] **Phase 4: History & CLI** - State Monad simulation, DSL parser, CLI interface
@@ -26,12 +26,13 @@ Decimal phases appear between their surrounding integers in numeric order.
 ### Phase 1: Foundation & Elevation
 **Goal**: Establish project structure, core types (GADTs for world states), coherent noise generation, and elevation mapping as the foundation for all causal layers.
 **Depends on**: Nothing (first phase)
-**Research**: Likely (new libraries and project setup)
+**Research**: Completed (2026-02-16)
 **Research topics**: hmatrix API and linear algebra patterns, hs-noise library for coherent noise (Perlin/Simplex), Stack/Cabal project structure for Haskell, GADT type design for world consistency
-**Plans**: TBD
+**Plans**: 2 (both complete)
 
 Plans:
-- (To be created during phase planning)
+- [x] 01-01: Foundation Setup (Cabal, GADT World types, module structure)
+- [x] 01-02: Noise & Elevation (Fractal terrain noise, massiv elevation maps)
 
 ### Phase 2: Hydrology
 **Goal**: Implement physics-based water flow where rivers never flow uphill, lakes form at basin minimums, and drainage networks follow elevation gradients—the visceral proof of causal correctness.
@@ -69,7 +70,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Elevation | 1/TBD | In progress | - |
+| 1. Foundation & Elevation | 2/2 | Complete | 2026-02-16 |
 | 2. Hydrology | 0/TBD | Not started | - |
 | 3. Climate & Biomes | 0/TBD | Not started | - |
 | 4. History & CLI | 0/TBD | Not started | - |
