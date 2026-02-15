@@ -17,7 +17,7 @@ None
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & Elevation** - Project structure, types, noise generation, elevation mapping
-- [ ] **Phase 2: Hydrology** - Rivers, lakes, basins (proof of causal correctness)
+- [x] **Phase 2: Hydrology** - Rivers, lakes, basins (proof of causal correctness)
 - [ ] **Phase 3: Climate & Biomes** - Temperature, precipitation, biome assignment from geo data
 - [ ] **Phase 4: History & CLI** - State Monad simulation, DSL parser, CLI interface
 
@@ -43,7 +43,7 @@ Plans:
 
 Plans:
 - [x] 02-01: Hydrology Foundation (Core types, Priority-Flood depression filling)
-- [ ] 02-02: Flow & Drainage (Flow direction, accumulation, drainage networks)
+- [x] 02-02: Flow & Drainage (Flow direction, accumulation, drainage networks)
 
 ### Phase 3: Climate & Biomes
 **Goal**: Derive climate zones (temperature, precipitation) from elevation and latitude, then assign biomes logically based on climate conditions.
