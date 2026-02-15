@@ -48,11 +48,13 @@ Plans:
 ### Phase 3: Climate & Biomes
 **Goal**: Derive climate zones (temperature, precipitation) from elevation and latitude, then assign biomes logically based on climate conditions.
 **Depends on**: Phase 2 (builds on complete geo layer)
-**Research**: Unlikely (internal logic following established patterns)
-**Plans**: TBD
+**Research**: Completed (2026-02-16)
+**Research topics**: Climate modeling formulas (lapse rate, solar angle), orographic precipitation, Whittaker biome classification
+**Plans**: 2 (1 complete)
 
 Plans:
-- (To be created during phase planning)
+- [x] 03-01: Climate Foundation (Temperature with lapse rate, Precipitation with orographic effects)
+- [ ] 03-02: Biome Classification (Whittaker diagram, climate → biome mapping)
 
 ### Phase 4: History & CLI
 **Goal**: Implement State Monad for temporal evolution, Megaparsec DSL parser for Universal Laws, and CLI interface with ASCII/JSON output.
@@ -73,5 +75,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation & Elevation | 2/2 | Complete | 2026-02-16 |
 | 2. Hydrology | 2/2 | Complete | 2026-02-16 |
-| 3. Climate & Biomes | 0/TBD | Not started | - |
+| 3. Climate & Biomes | 1/2 | In progress | - |
 | 4. History & CLI | 0/TBD | Not started | - |
